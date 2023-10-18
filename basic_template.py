@@ -23,6 +23,8 @@ SOME_CONSTANT2 =  config.getint('server', 'port')
 
 
 def main():
+    logger.debug('MAIN started')
+
     logger.critical('do stuff here')
     logp.debug('print this')
 
