@@ -1,6 +1,7 @@
 import logging
 import logging.config
 import time
+from enum import Enum, auto
 
 from pydantic.dataclasses import dataclass
 
@@ -10,9 +11,13 @@ logp = logging.getLogger('print')
 
 logger.debug('importing klasses')
 
+class Numbers(Enum):
+    ONE = auto()
+    TWO = auto()
+
 @dataclass
 class User:
-    id: int
+    uid: int
     name: str
     birth: int
 
